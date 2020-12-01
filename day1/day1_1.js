@@ -1,5 +1,5 @@
 const fs = require('fs');
-let codeInput = fs.readFileSync('puzzle_input.txt', 'utf8').split('\n');
+let codeInput = fs.readFileSync('puzzle_input.txt').split('\n');
 
 for(let i = 0; i < codeInput.length; i++) {
   for(let j = i + 1; j < codeInput.length; j++ ) {
