@@ -1,4 +1,3 @@
-const { count } = require('console');
 const fs = require('fs');
 let codeInput = fs.readFileSync('puzzleInput.txt', 'utf8').split('\n');
 
