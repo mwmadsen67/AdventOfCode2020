@@ -29,7 +29,9 @@ for (let i = 0; i < input.length; i++) {
   let seatId = (row * 8) + col;
   seatIds.push(seatId);
 }
-// console.log(seatIds.length)
+
+// console.log(Math.min(...seatIds)); // 32 - 913
+
 seatIds.sort(function (a, b) {
   return a - b;
 });
@@ -39,8 +41,6 @@ for (let k = 0; k < seatIds.length; k++) {
     console.log(k + 32);
     break;
   }
-  // console.log(seatIds[k], k)
 }
-// console.log(seatIds);
+
 console.log(seatIds.includes(716))
-// console.log(Math.min(...seatIds)); // 32 - 913
