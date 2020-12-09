@@ -17,12 +17,8 @@ while (!skipWorked) {
 
     let [op, amt] = [codes[i][0], codes[i][1]];
 
-    if (!skipTried && !skipTries[i] && op === 'jmp') {
-      op = 'nop';
-      skipTries[i] = true;
-      skipTried = true;
-    } else if (!skipTried && !skipTries[i] && op === 'nop') {
-      op = 'jmp';
+    if (!skipTried && !skipTries[i] && op !== 'acc') {
+      op = op === 'nop' ? 'jmp' : 'nop';
       skipTries[i] = true;
       skipTried = true;
     }
@@ -35,11 +31,11 @@ while (!skipWorked) {
       case 'jmp':
         i += amt[0] === '+' ? (parseInt(amt.slice(1)) - 1) : (parseInt(amt) - 1);
         break;
-        
+
       default:
         break;
     }
   }
 }
 
-console.log(skipTries, acc);
+console.log(acc);
