@@ -1,10 +1,8 @@
 const fs = require('fs');
 let input = fs.readFileSync('puzzle.txt', 'utf8').split('\n');
 
-// const dirs = {"E": 0, "S": 0, "W": 0, "N": 0};
 let pos = [0,0];
 const waypoint = [10, 1]; // [x,y] or [east, north]
-// let angle = 0;
 
 for (let i = 0; i < input.length; i++) {
   let dir = input[i][0];
@@ -54,5 +52,3 @@ console.log(pos)
 let manhattan = Math.abs(pos[0]) + Math.abs(pos[1]);
 
 console.log(manhattan);
-
-// 1791 too high

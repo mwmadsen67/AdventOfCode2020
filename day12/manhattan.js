@@ -3,7 +3,6 @@ let input = fs.readFileSync('puzzle.txt', 'utf8').split('\n');
 
 // const dirs = {"E": 0, "S": 0, "W": 0, "N": 0};
 const dirs = [0,0,0,0];
-const rotations = [0, 90, 180, 270];
 let angle = 0;
 
 for (let i = 0; i < input.length; i++) {
